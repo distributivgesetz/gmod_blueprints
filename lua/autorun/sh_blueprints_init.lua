@@ -55,6 +55,7 @@ bpinclude("system/sh_bpusermanager.lua")
 bpinclude("system/sh_bpfile.lua")
 bpinclude("system/sh_bpfilesystem.lua")
 --bpinclude("system/sh_bpswep.lua")
+bpinclude("system/cl_bptutorialmanager.lua")
 
 -- DEFS
 bpinclude("defs/sh_bpdefpack.lua")
@@ -87,6 +88,7 @@ bpinclude("ui/cl_bpmoduleeditor.lua")
 bpinclude("ui/cl_bpassetbrowser.lua")
 bpinclude("ui/cl_bppinlistentry.lua")
 bpinclude("ui/cl_bpvaluepanel.lua")
+bpinclude("ui/cl_bptutloadermenu.lua")
 bpinclude("ui/cl_bpeditor.lua")
 
 -- TEST

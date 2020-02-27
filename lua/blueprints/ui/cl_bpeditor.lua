@@ -345,6 +345,26 @@ function PANEL:OpenImport()
 
 end
 
+function PANEL:OpenTutorial() 
+
+	local outer = vgui.Create("DPanel")
+
+	local tutmenu = vgui.Create( "BPTutorialMenu", outer )
+	tutmenu:Dock( FILL )
+
+	local sheet = self.Tabs:AddSheet( "Tutorial", outer, "Tutorial", "icon16/zoom.png", true )
+	sheet.Tab.Close = function()
+		self.Tabs:CloseTab( sheet.Tab )
+		sheet.Panel:Remove()
+	end
+
+	outer:DockMargin(5, 0, 5, 5)
+	outer:Dock( FILL )
+
+	self.Tabs:SetActiveTab( sheet.Tab )
+
+end
+
 function PANEL:FinishImport( import, text )
 
 	local b,e = pcall( function()

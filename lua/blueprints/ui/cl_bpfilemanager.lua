@@ -431,6 +431,7 @@ function PANEL:Init()
 	self.menu:Add("Refresh Local Files", function() self.localList:ClearFiles() bpfilesystem.IndexLocalFiles(true) end, nil, "icon16/arrow_refresh.png")
 	self.menu:Add("Import", function() self.editor:OpenImport() end, nil, "icon16/folder_page.png")
 	self.menu:Add("Help", function() self.editor:OpenHelp() end, nil, "icon16/help.png")
+	self.menu:Add("Tutorial", function() self.editor:OpenTutorial() end, nil, "icon16/zoom.png")
 	self.menu:Add("About", function() self.editor:OpenAbout() end, nil)
 	--self.menu:Add("Upload", function() end, nil, "icon16/arrow_up.png")
 
