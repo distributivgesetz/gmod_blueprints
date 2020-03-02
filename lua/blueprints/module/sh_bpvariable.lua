@@ -117,6 +117,12 @@ function meta:SetType( type )
 
 end
 
+function meta:CreatePin( dir, nameOverride )
+
+	return MakePin(dir, self:GetName(), self.pintype)
+
+end
+
 function meta:GetterNodeType()
 
 	return self.getterNodeType
@@ -153,6 +159,7 @@ function meta:ReadFromStream(stream, mode, version)
 	self.pintype = bppintype.New():WithOuter(self):ReadFromStream(stream, mode, version)
 	self.default = bpdata.ReadValue( stream )
 	self.repmode = bpdata.ReadValue( stream )
+	self.default = self.pintype:GetDefault()
 
 end
 
