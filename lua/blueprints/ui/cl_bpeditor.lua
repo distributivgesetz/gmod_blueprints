@@ -351,6 +351,7 @@ function PANEL:OpenTutorial()
 
 	local tutmenu = vgui.Create( "BPTutorialMenu", outer )
 	tutmenu:Dock( FILL )
+	tutmenu.editor = self
 
 	local sheet = self.Tabs:AddSheet( "Tutorial", outer, "Tutorial", "icon16/zoom.png", true )
 	sheet.Tab.Close = function()
